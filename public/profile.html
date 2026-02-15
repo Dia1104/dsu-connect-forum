@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <style>
+    body{
+      background:#0f172a;
+      color:white;
+      font-family:Arial;
+      padding:20px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:15px;
+      margin:10px 0;
+      border-radius:12px;
+    }
+
+    button{
+      padding:10px 15px;
+      border:none;
+      border-radius:8px;
+      background:#38bdf8;
+      cursor:pointer;
+      margin-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>My Profile</h2>
+
+<div id="userBox" class="card"></div>
+
+<h3>My Posts</h3>
+<div id="myPosts"></div>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+fetch("/myprofile")
+.then(res=>res.json())
+.then(data=>{
+  document.getElementById("userBox").innerHTML = `
+    <h3>${data.user.name}</h3>
+    <p>${data.user.email}</p>
+  `;
+
+  data.posts.forEach(p=>{
+    document.getElementById("myPosts").innerHTML += `
+      <div class="card">
+        <p>${p.content}</p>
+        <small>Votes: ${p.votes}</small>
+      </div>
+    `;
+  });
+});
+
+function logout(){
+  window.location="/logout";
+}
+</script>
+
+</body>
+</html>

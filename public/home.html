@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DSU Connect</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0f172a;
+  color:white;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#020617;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:600;
+}
+
+.navbar a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+}
+
+/* LAYOUT */
+.container{
+  display:flex;
+  max-width:1200px;
+  margin:auto;
+  gap:20px;
+  padding:20px;
+}
+
+.left{ width:25%; }
+.center{ width:50%; }
+.right{ width:25%; }
+
+/* CARDS */
+.card{
+  background:#020617;
+  padding:18px;
+  border-radius:12px;
+  margin-bottom:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+/* POST BOX */
+textarea{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  background:#0f172a;
+  color:white;
+}
+
+input[type=file]{
+  margin-top:10px;
+}
+
+button{
+  background:#2563eb;
+  border:none;
+  color:white;
+  padding:10px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+/* POSTS */
+.post{
+  background:#020617;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.post img,
+.post video{
+  width:100%;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+/* FLOAT BUTTON */
+.fab{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  font-size:26px;
+  background:#2563eb;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">🚀 DSU Connect</div>
+
+  <div>
+    <a href="profile.html">Profile</a>
+    <a href="/logout"><button>Logout</button></a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="container">
+
+  <!-- LEFT -->
+  <div class="left">
+
+    <div class="card">
+      <h2>Welcome 🚀</h2>
+      <p>Find teammates, share projects & opportunities.</p>
+    </div>
+
+    <div class="card">
+      <h3>Communities</h3>
+      <p>💼 Placements</p>
+      <p>🤝 Team Up</p>
+      <p>💻 Projects</p>
+      <p>🎯 Hackathons</p>
+      <p>📚 Notes</p>
+    </div>
+
+  </div>
+
+  <!-- CENTER -->
+  <div class="center">
+
+    <div class="card">
+      <form action="/post" method="POST" enctype="multipart/form-data">
+        <textarea name="content" placeholder="Share something with DSU..."></textarea>
+        <input type="file" name="media">
+        <button type="submit">Post</button>
+      </form>
+    </div>
+
+    <div id="feed"></div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+
+    <div class="card">
+      <h3>🔥 Trending</h3>
+      <p>#Hackathon</p>
+      <p>#Internships</p>
+      <p>#AI</p>
+    </div>
+
+    <div class="card">
+      <h3>About</h3>
+      <p>DSU student collaboration platform</p>
+    </div>
+
+  </div>
+
+</div>
+
+<button class="fab" onclick="window.scrollTo(0,0)">↑</button>
+
+<script src="app.js"></script>
+
+</body>
+</html>

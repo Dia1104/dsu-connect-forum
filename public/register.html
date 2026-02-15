@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins;
+  height:100vh;
+  display:flex;
+}
+
+.left{
+  flex:1;
+  background:url("https://images.unsplash.com/photo-1498243691581-b145c3f54a5a") center/cover;
+}
+
+.right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#0f172a;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  width:320px;
+  text-align:center;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:20px;
+  border:none;
+  border-radius:10px;
+  background:#22c55e;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="left"></div>
+
+<div class="right">
+  <div class="card">
+    <h2>Create Account</h2>
+
+    <form action="/register" method="POST">
+      <input name="name" placeholder="Full Name" required>
+      <input name="email" placeholder="College Email" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <button>Register</button>
+    </form>
+
+    <a href="login.html">Already have account →</a>
+  </div>
+</div>
+
+</body>
+</html>

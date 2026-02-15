@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DSU Connect Login</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Poppins;
+  background:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1") center/cover;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.box{
+  background:rgba(0,0,0,0.75);
+  padding:40px;
+  border-radius:14px;
+  width:330px;
+  color:white;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+h2{text-align:center}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-top:12px;
+  border:none;
+  border-radius:8px;
+  background:#111;
+  color:white;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  margin-top:15px;
+  background:#2563eb;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+a{color:#38bdf8}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>🚀 DSU Connect</h2>
+
+  <form action="/login" method="POST">
+    <input name="email" placeholder="DSU Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button>Login</button>
+  </form>
+
+  <p style="text-align:center;margin-top:15px">
+    New user?
+    <a href="/register.html">Create account</a>
+  </p>
+</div>
+
+</body>
+</html>
