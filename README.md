@@ -1,4 +1,4 @@
-https://dsu-connect-forum.onrender.com
+https://dsu-connect.onrender.com
 
 College Forum Web App
 
